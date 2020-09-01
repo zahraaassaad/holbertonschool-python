@@ -10,5 +10,5 @@ if int(str(number)[-1])>5:
   print('Last digit of {} is {} and is greater than 5'.format(number,str(number)[-1]))
 elif int(str(number)[-1])==0:
   print('Last digit of {} is {} and is 0'.format(number,str(number)[-1]))
-elif int(str(number)[-1])<6:
+elif int(str(number)[-1])<6 and int(str(number)[-1])!=0:
   print('Last digit of {} is {} and is 0'.format(number,str(number)[-1]))
