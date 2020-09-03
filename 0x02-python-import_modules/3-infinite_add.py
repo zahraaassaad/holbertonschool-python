@@ -3,7 +3,7 @@ import sys
 
 
 def main():
-    arguments=sys.argv
+    arguments = sys.argv
     arguments = arguments[1:]
     result=0
     for args in arguments:
