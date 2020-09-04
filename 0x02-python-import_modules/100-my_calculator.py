@@ -12,6 +12,7 @@ def main():
 
     elif arguments[2] != "+" and arguments[2] != "-" and arguments[2] != "*" and arguments[2] != "/":
         print("Unknown operator. Available operators: +, -, * and /")
+        print("**")
         sys.exit(1)
     
     elif arguments[2] == "+":
