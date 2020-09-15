@@ -4,9 +4,9 @@
 class Square():
     """A square class."""
 
-    def __init__(self):
-        """Initialize class."""
-        pass
+    def __init__(self, size=0):
+        """Initialize size attribute"""
+        self.__size = size
 '''
 #!/usr/bin/python3
 
