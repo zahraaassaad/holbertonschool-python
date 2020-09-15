@@ -7,7 +7,4 @@
 
 class Square():
     """Square class."""
-
-    def __init__(self):
-        """To initialize the class."""
-        pass
+    pass
