@@ -5,6 +5,9 @@
     return {}
 """
 
+
 class Square():
-    """Square class."""
+    """Square class.
+       It defines a square and returns an empty block.
+    """
     pass
