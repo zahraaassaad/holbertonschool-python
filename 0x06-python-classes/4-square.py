@@ -1,4 +1,10 @@
 #!/usr/bin/python3
+"""
+    4-square.py
+    Module defining square
+    return {}
+"""
+
 class Square:
     """Class Square"""
 
