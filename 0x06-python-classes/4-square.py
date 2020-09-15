@@ -2,7 +2,6 @@
 """
     4-square.py
     Module defining square
-    return size
 """
 
 
@@ -18,12 +17,12 @@ class Square:
 
     @property
     def size(self):
-        """Retrieve size of Square class."""
+        """Retrieve __size of Square class."""
         return self.__size
     
     @size.setter
     def size(self, value):
-        """Set size of Square class."""
+        """Set __size of Square class."""
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         elif value < 0:
