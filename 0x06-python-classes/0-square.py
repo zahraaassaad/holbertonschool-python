@@ -6,7 +6,7 @@
 """
 
 
-class Square():
+class Square:
     """Square class.
        It defines a square and returns an empty block.
     """
