@@ -11,9 +11,7 @@ class Square:
        return size
     """
     def __init__(self, size=0):
-        """Initializes the data.
-           return size
-        """
+        """return size"""
         self.__size = size
 
     @property
