@@ -1,15 +1,9 @@
 #!/usr/bin/python3
-
-
-class Square():
-    """A square class."""
-
-    def __init__(self, size=0):
-        """Initialize size attribute"""
-        self.__size = size
-'''
-#!/usr/bin/python3
-
+"""
+    0-square.py
+    Module defining square
+    return {}
+"""
 
 class Square():
     """Square class."""
@@ -17,4 +11,3 @@ class Square():
     def __init__(self):
         """To initialize the class."""
         pass
-'''
