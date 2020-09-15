@@ -10,7 +10,6 @@
 class Square:
     """Square class.
        It defines a square by private instance attribute size. 
-       returns area size
     """
     def __init__(self, size=0):
         """Initializes the data."""
@@ -21,5 +20,7 @@ class Square:
         self.__size = size
     
     def area(self):
-        """Calculates and returns square area."""
+        """Calculates and returns square area.
+           returns area
+        """
         return self.__size ** 2
