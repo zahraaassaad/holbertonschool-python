@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-    3-square.py
+    4-square.py
     Module defining square
     return size
 """
