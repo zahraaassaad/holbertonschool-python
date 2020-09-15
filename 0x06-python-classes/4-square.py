@@ -17,13 +17,11 @@ class Square:
         self.__size = size
 
     @property
-    """Retrieve size of Square class."""
     def size(self):
         """Retrieve size of Square class."""
         return self.__size
     
     @size.setter
-    """Set size of Square class."""
     def size(self, value):
         """Set size of Square class."""
         if not isinstance(value, int):
