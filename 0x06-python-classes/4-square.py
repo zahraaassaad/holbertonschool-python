@@ -2,7 +2,7 @@
 """
     4-square.py
     Module defining square
-    return {}
+    return size
 """
 
 
@@ -11,15 +11,19 @@ class Square:
        return size
     """
     def __init__(self, size=0):
-        """return size"""
+        """Initializes the data.
+        return size
+        """
         self.__size = size
 
     @property
+    """Retrieve size of Square class."""
     def size(self):
         """Retrieve size of Square class."""
         return self.__size
     
     @size.setter
+    """Set size of Square class."""
     def size(self, value):
         """Set size of Square class."""
         if not isinstance(value, int):
