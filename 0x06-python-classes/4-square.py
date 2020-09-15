@@ -2,6 +2,7 @@
 """
     4-square.py
     Module defining square
+    return {}
 """
 
 
