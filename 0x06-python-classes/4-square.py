@@ -4,7 +4,6 @@
     Module defining square
     return {}
 """
-
 class Square:
     """Class Square"""
 
