@@ -65,8 +65,8 @@ class Rectangle():
         return(str1[:-1])
 
     def __repr__(self):
-        """Return the representation of the rectangle"""
+        """Get string evaluation of rectangle."""
         if self.__height == 0 or self.__height == 0:
             return("")
         else:
-            return("Rectangle({:d},{:d})".format(self.__width, self.__height))
+            return("Rectangle({:d}, {:d})".format(self.__width, self.__height))
