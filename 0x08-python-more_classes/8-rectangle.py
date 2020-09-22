@@ -68,7 +68,7 @@ class Rectangle():
             str1 = ""
             for i in range(self.__height):
                 for j in range(self.__width):
-                    str1 += print_symbol
+                    str1 += str(self.print_symbol)
                 str1 += "\n"
         return(str1[:-1])
 
@@ -85,3 +85,14 @@ class Rectangle():
         # decreases to its number of instances
         Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
+
+    def bigger_or_equal(rect_1, rect_2):
+        """Return rectangle with biggest area."""
+        if not isinstance(rect_1, Rectangle):
+            raise TypeError("rect_1 must be an instance of Rectangle")
+        if not isinstance(rect_2, Rectangle):
+            raise TypeError("rect_2 must be an instance of Rectangle")
+        if rect_2.area() > rect_1.area():
+            return rect_2
+        else:
+            return rect_1
