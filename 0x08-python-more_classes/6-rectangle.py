@@ -82,5 +82,5 @@ class Rectangle():
         """Prints when instance is deleted."""
         # when a rectangle is deleted, the rectangle
         # decreases to its number of instances
-        Rectangle.number_of_instances -= 1        
+        Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
