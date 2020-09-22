@@ -65,7 +65,7 @@ class Rectangle():
         return(str1[:-1])
 
     def __repr__(self):
-        """Print the rectangle with the character #."""
+        """Return the representation of the rectangle"""
         if self.__height == 0 or self.__height == 0:
             return("")
         else:
