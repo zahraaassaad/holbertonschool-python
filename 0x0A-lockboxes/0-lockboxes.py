@@ -1,7 +1,14 @@
 #!/usr/bin/python3
-
+"""
+    0-lockboxes.py
+    This module contains the following functions:
+    - canUnlockAll
+"""
 
 def canUnlockAll(boxes):
+    """
+    Return True or False if all boxes unlocked.
+    """
     keys = [0]
     for key in keys:
         if boxes[key] != -999:
