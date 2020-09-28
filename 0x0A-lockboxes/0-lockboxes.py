@@ -7,9 +7,9 @@ def canUnlockAll(boxes):
         for i in boxes[key]:
             if i not in keys:
                 keys.append(i)
-    return len(keys) == len(boxes)
-        #return False
-    #return True
+    if len(keys) != len(boxes):
+        return False
+    return True
 
 '''
         if boxes[key] != -999:
