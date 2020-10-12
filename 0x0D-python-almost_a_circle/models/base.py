@@ -1,19 +1,21 @@
 #!/usr/bin/python3
+
 """
-    base.py
-    Module defining base
-    return {}
+This is a module for Base class.
 """
 
+import json
+import csv
+import os.path
 
-class Base():
+
+class Base:
     """A base class."""
 
-    # A class variable, counting the number of bases
     __nb_objects = 0
 
     def __init__(self, id=None):
-        """Initialize class."""
+        """Intialize a base."""
         if id is not None:
             self.id = id
         else:
