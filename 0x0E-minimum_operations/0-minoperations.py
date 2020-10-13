@@ -9,7 +9,7 @@ def minOperations(n):
     """calculates the fewest number of operations needed."""
     res = 0
     for i in range(2, n):
-        while n%i == 0:
+        while n % i == 0:
             res += i
             n = n/i
     return res
