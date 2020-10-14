@@ -7,6 +7,8 @@ Module for minOperations.
 
 def minOperations(n):
     """calculates the fewest number of operations needed."""
+    if n <=1:
+        return 0
     res = 0
     for i in range(2, n+1):
         while n % i == 0:
