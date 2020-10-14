@@ -9,9 +9,12 @@ def minOperations(n):
     """calculates the fewest number of operations needed."""
     if n <=1:
         return 0
+    div = 2
     res = 0
-    for i in range(2, n+1):
-        while n % i == 0:
-            res += i
-            n = n/i
+    while n > 1:
+        if n % div == 0:
+            n /= div
+            res += div
+        else:
+            div += 1
     return res
