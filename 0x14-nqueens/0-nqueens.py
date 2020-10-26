@@ -31,4 +31,4 @@ def solve(n):
 if __name__ == '__main__':
     BOARD_SIZE = int(argv[1])
     for answer in solve(BOARD_SIZE):
-        print(list((x-1, y-1) for x, y in enumerate(answer, start=1)))
+        print(list([x-1, y-1] for x, y in enumerate(answer, start=1)))
