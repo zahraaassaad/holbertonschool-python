@@ -6,7 +6,7 @@ Module for rotate_2d_m.
 """
 
 
-def rotate_2d_m(matrix):
+def rotate_2d_matrix(matrix):
     """ Given an n x n 2D matrix, rotate it 90 degrees."""
     matrix_cp = np.copy(matrix)
     for i in range(len(matrix)):
