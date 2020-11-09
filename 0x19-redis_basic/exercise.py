@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-''' Define Cache class for use with Redis. '''
+''' Define Cache class using Redis. '''
 
 import redis
 from typing import Union, Optional, Callable, List
@@ -9,12 +9,12 @@ from functools import wraps
 
 
 def count_calls(method: Callable) -> Callable:
-    ''' Track number of calls to method. '''
+    ''' Detect calls of method. '''
     key = method.__qualname__
 
     @wraps(method)
     def wrapper(self, *args, **kwargs):
-        ''' Wrapper for function. '''
+        ''' Function wrapper. '''
         self._redis.incr(key)
         return method(self, *args, **kwargs)
 
@@ -22,13 +22,13 @@ def count_calls(method: Callable) -> Callable:
 
 
 def call_history(method: Callable) -> Callable:
-    ''' Track history of inputs to and outputs of a function. '''
+    ''' Detect historical inputs and outputs. '''
     in_key = method.__qualname__ + ':inputs'
     out_key = method.__qualname__ + ':outputs'
 
     @wraps(method)
     def wrapper(self, *args, **kwargs):
-        ''' Wrapper for function. '''
+        ''' Function wrapper. '''
         self._redis.rpush(in_key, str(args))
         output = method(self, *args, **kwargs)
         self._redis.rpush(out_key, str(output))
@@ -38,7 +38,7 @@ def call_history(method: Callable) -> Callable:
 
 
 def replay(method: Callable) -> None:
-    ''' Show history of calls to `method` and their outputs. '''
+    ''' Detect historical calls to `method` and the outputs. '''
     ins = method.__self__
     count_key = method.__qualname__
     in_key = method.__qualname__ + ':inputs'
@@ -54,7 +54,7 @@ def replay(method: Callable) -> None:
 
 
 class Cache:
-    ''' Cache class for use with Redis. '''
+    ''' Cache class using Redis. '''
 
     def __init__(self) -> None:
         ''' Initialize instance of Cache. '''
