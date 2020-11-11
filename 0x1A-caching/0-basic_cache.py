@@ -1,20 +1,19 @@
-#!/usr/bin/python3
-""" BasicCache module"""
+#!/usr/bin/env python3
+""" Module BaseCaching """
 
 from base_caching import BaseCaching
 
 
 class BasicCache(BaseCaching):
-    """caching system."""
-    
+    """ class for BasicCache """
+
     def put(self, key, item):
-        """put item for key."""
+        """ Add an item in the cache """
         if key is None or item is None:
-            return
-        self.cache_data[key] = item
+            pass
+        else:
+            self.cache_data[key] = item
 
     def get(self, key):
-        """return the value in self.cache_data."""
-        if key is None or key not in self.cache_data.keys():
-            return
+        """ Get an item by key """
         return self.cache_data.get(key)
