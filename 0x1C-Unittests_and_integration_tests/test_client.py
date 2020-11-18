@@ -35,3 +35,4 @@ class TestGithubOrgClient(TestCase):
             goc = GithubOrgClient('buttercup')
             pru = goc._public_repos_url
             self.assertEqual(pru, 'test')
+
