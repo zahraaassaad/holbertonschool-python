@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """ python basic unittest """
+
 import unittest
 import requests
 from parameterized import parameterized
@@ -10,6 +11,7 @@ from urllib.error import HTTPError
 
 class TestGithubOrgClient(unittest.TestCase):
     """TestGithubOrgClient"""
+
     @parameterized.expand([
         ("google"),
         ("abc"),
@@ -17,6 +19,7 @@ class TestGithubOrgClient(unittest.TestCase):
     @patch("client.get_json", return_value={"payload": True})
     def test_org(self, org_name, mock_get):
         """test_org"""
+
         test_client = GithubOrgClient(org_name)
         test_return = test_client.org
         self.assertEqual(test_return, mock_get.return_value)
@@ -24,6 +27,7 @@ class TestGithubOrgClient(unittest.TestCase):
 
     def test_public_repos_url(self):
         """ test GithubOrgClient._public_repos_url"""
+
         with patch.object(GithubOrgClient,
                           "org",
                           new_callable=PropertyMock,
@@ -38,6 +42,7 @@ class TestGithubOrgClient(unittest.TestCase):
     @patch("client.get_json", return_value=[{"name": "twitter"}])
     def test_public_repos(self, mock_get):
         """test GithubOrgClient.public_repos"""
+
         with patch.object(GithubOrgClient,
                           "_public_repos_url",
                           new_callable=PropertyMock,
@@ -54,6 +59,7 @@ class TestGithubOrgClient(unittest.TestCase):
         ])
     def test_has_license(self, repo, license_key, expected_return):
         """ test GithubOrgClient.has_license"""
+
         test_client = GithubOrgClient("twitter")
         test_return = test_client.has_license(repo, license_key)
         self.assertEqual(expected_return, test_return)
@@ -63,12 +69,15 @@ class TestGithubOrgClient(unittest.TestCase):
     ])
 class TestIntegrationGithubOrgClient(unittest.TestCase):
     """ class TestIntegrationGithubOrgClient """
+
     @classmethod
     def setUpClass(cls):
         """set up class"""
+
         cls.get_patcher = patch('requests.get', side_effect=HTTPError)
 
     @classmethod
     def tearDownClass(cls):
         """tear down class"""
+
         cls.get_patcher.stop()
