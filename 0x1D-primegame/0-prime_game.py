@@ -10,9 +10,10 @@ def isWinner(x, nums):
     no = 0
     for number_of_rounds in range(x):
         isPrime = True
-        for num in range(2, nums[number_of_rounds]):
+        for num in range(2, int(nums[number_of_rounds] ** 0.5) + 1):
             if nums[number_of_rounds] % num == 0:
                 isPrime = False
+                break
 
         if isPrime:
             no += 1
@@ -20,5 +21,8 @@ def isWinner(x, nums):
     if no % 2 == 0:
         return "Ben"
 
-    else:
+    elif no % 2 != 0:
         return "Maria"
+
+    else:
+        return None
