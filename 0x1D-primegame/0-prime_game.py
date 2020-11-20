@@ -8,7 +8,7 @@ Module for isWinner.
 def isWinner(x, nums):
     """ Prime numbers game. """
     biggest_prime = nums[-1]
-    if biggest_prime < 1:
+    if biggest_prime < 1 or x < 1:
         return None
     if x > biggest_prime:
         for i in range(biggest_prime + 1, x + 1):
