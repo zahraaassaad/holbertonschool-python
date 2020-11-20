@@ -1,8 +1,12 @@
 #!/usr/bin/python3
 
+"""
+Module for isWinner.
+"""
+
+
 def isWinner(x, nums):
     """ Prime numbers game. """
-    number_of_rounds = 0
     no = 0
     for number_of_rounds in range(x):
         isPrime = True
