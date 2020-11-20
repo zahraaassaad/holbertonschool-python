@@ -20,8 +20,5 @@ def isWinner(x, nums):
     if no % 2 == 0:
         return "Ben"
 
-    elif no % 2 != 0:
-        return "Maria"
-
     else:
-        return None
+        return "Maria"
