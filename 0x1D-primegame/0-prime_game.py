@@ -8,12 +8,11 @@ Module for isWinner.
 def isWinner(x, nums):
     """ Prime numbers game. """
     no = 0
-    for number_of_rounds in range(x):
+    for number_of_rounds in range(len(nums)):
         isPrime = True
-        for num in range(2, int(nums[number_of_rounds] ** 0.5) + 1):
+        for num in range(2, nums[number_of_rounds]):
             if nums[number_of_rounds] % num == 0:
                 isPrime = False
-                break
 
         if isPrime:
             no += 1
