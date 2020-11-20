@@ -9,8 +9,8 @@ def isWinner(x, nums):
     """ Prime numbers game. """
     if x < 0 or nums[-1] < 1:
         return None
-    Alice_score = 0
-    Bob_score = 0
+    Maria_score = 0
+    Ben_score = 0
     prime = [False] * 100001
     primes = []
     for i in range(2, 100001):
@@ -30,10 +30,10 @@ def isWinner(x, nums):
             num += 1
         l += 1
         if (['Maria', 'Ben'][(num % 2) ^ 1]) == "Maria":
-            Alice_score += 1
+            Maria_score += 1
         else:
-            Bob_score += 1
-    if Alice_score > Bob_score:
+            Ben_score += 1
+    if Maria_score > Ben_score:
         return "Maria"
     else:
         return "Ben"
