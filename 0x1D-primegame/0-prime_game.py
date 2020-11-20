@@ -7,21 +7,10 @@ Module for isWinner.
 
 def isWinner(x, nums):
     """ Prime numbers game. """
-    no = 0
-    for possiblePrime in range(len(nums)):
-        isPrime = True
-        for num in range(2, possiblePrime):
-            if possiblePrime % num == 0:
-                isPrime = False
-
-        if isPrime:
-            no += 1
-
-    if no % 2 == 0:
-        return "Ben"
-
-    elif no % 2 != 0:
-        return "Maria"
-
-    else:
-        return None
+    biggest_prime = nums[-1]
+    if x > biggest_prime:
+        for i in range(biggest_prime + 1, x + 1):
+            for y in range(2, int(x ** .5) + 1):
+                if x % y:
+                    nums.append(i)
+    return 'Ben' if sum(i <= x for i in nums) % 2 else 'Maria'
